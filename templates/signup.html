@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Signup</title>
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+        <div class="row">
+          <div class="col-8 bg-image" style="background-image: url('../imgs/Ayurvedaoimg.jpeg'); background-size: cover; background-position: center; height: 800px;"></div>
+          
+          <div class="col-4">
+            <a class="nav-link fw-bold d-flex justify-content-end mt-3 me-4" href="/"><span style="color: MediumSeaGreen;">Home</span></a>
+            
+            <div class="text-center">
+              <img src="../imgs/AB logo.png" width="100" height="100" alt="Logo" class="mb-3 mt-5">
+              <h1 class="mb-3 text-" style="color: tomato;">AyurBharat</h1>
+              <h3 class="mb-3">Sign up</h3>
+            </div>
+            <form action="/action_page.php" method="post">
+                <input type="text" name="name" placeholder="Name" class="form-control mb-3" required>
+                <input type="email" name="email" placeholder="Email/Phone Number" class="form-control mb-3" required>
+                <input type="number" name="phoneno" placeholder="Phone Number" class="form-control mb-3" required>
+                <input type="password" name="password" placeholder="Password" class="form-control mb-3" required>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary mb-3">Sign up</button>
+                </div>
+              
+            </form>
+            <div class="text-center">
+              <p class="text-gray">or</p>
+              <button type="button" class="btn btn-danger  mb-3">Continue with Google</button>
+              <p>Already have an account? <a href="/login">Login</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- footer -->
+    <footer class="container-fluid pt-3 bg-light">
+        <p class="text-center fw-bold">Copyright © 2023 Ayru Bharat</p>
+    </footer>
+{% endblock %}

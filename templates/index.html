@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>AryuBharat</title>
+{% endblock %}
+
+{% block body %}
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      <img src="../imgs/AB logo.png" width="50" height="50">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse justify-content-end">
+      <p class="h4 fw-bold" style="color: tomato;">AyurBharat <span class="h5" style="color: MediumSeaGreen;">-Arogya Bharat</span></p>
+    </div>
+    
+    <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+      <ul class="navbar-nav fw-bold">
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Log<span style="color: MediumSeaGreen;">in</span></a>
+        </li>
+        <li class="nav-item ml-5">
+          <a class="nav-link" href="/signup">Sign <span style="color: MediumSeaGreen;">up</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- text section -->
+<div class="container">
+  <p class="display-6 fw-bold text-center pt-4" style="color: DodgerBlue;">AyurBharat Solution For Your Problem</p>
+  <p class="text-center">The one stop solution for your problems, just say us and we will find solution for you</p>
+</div>
+
+<!-- form section -->
+<div class="container pt-5">
+  <form action="/action_page.php" method="post">
+    <div class="row mt-3">
+      <div class="col-sm-6">
+        <!-- <label for="name">Name:</label> -->
+        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+      </div>
+      <div class="col-sm-3">
+        <!-- <label for="age">Age:</label> -->
+        <input type="number" class="form-control" id="age" placeholder="Enter your age" min="1" max="122" required>
+      </div>
+      <div class="col-sm-3">
+          <!-- <label for="gender">Gender:</label> -->
+          <select class="form-control" id="gender" required>
+            <option selected="selected">Select gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-sm-6">
+        <!-- <label for="disease">Disease:</label> -->
+        <input type="text" class="form-control" id="disease" placeholder="Enter the disease">
+      </div>
+      <div class="col-sm-6">
+          <!-- <label for="region">Region:</label> -->
+          <select class="form-control" id="region" required>
+            <option selected="selected">Select region</option>
+            <option>Africa</option>
+            <option>The Americas</option>
+            <option>Asia</option>
+            <option>Europe</option>
+            <option>Oceania</option>
+          </select>
+        </div>
+    </div>
+    <div class="row mt-3">
+      
+      <div class="col-sm">
+        <!-- <label for="symptoms">Symptoms:</label> -->
+        <textarea class="form-control" id="symptoms" rows="5" placeholder="Give your symptoms"></textarea>
+      </div>
+    </div>
+    <div class="row  mt-5">
+      <div class="col-sm-12 d-flex justify-content-center s-3">
+        <button type="submit" class="btn l-lg " style="background-color: MediumSeaGreen; color: white;">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<!-- footer -->
+<footer class="container-fluid pt-3 fixed-bottom  bg-light">
+  <p class="text-center fw-bold">Copyright © 2023 Ayru Bharat</p>
+</footer>
+{% endblock %}
