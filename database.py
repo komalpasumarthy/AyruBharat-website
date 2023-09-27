@@ -11,24 +11,25 @@ def get_connector():
 def get_data():
   cnx = get_connector()
   cursor = cnx.cursor()
-  
+
   query = "SELECT * FROM Symptoms"
+  
   cursor.execute(query)
   data = cursor.fetchall()
+  cursor.close()
+  cnx.close()
   return data
 
 
-def get_disease(disease):
-  cnx = get_connection()
+def get_disease(disease, symptoms):
+  cnx = get_connector()
   cursor = cnx.cursor()
 
-  query = ("SELECT * FROM Symptoms WHERE disease = %s AND symptoms = %s")
+  query = ("SELECT * FROM Symptoms WHERE AyurTerm = %s AND symptom = %s")
+  
   cursor.execute(query, (disease, symptoms))
-
   data = cursor.fetchall()
-
   cursor.close()
   cnx.close()
-
   return data
 
