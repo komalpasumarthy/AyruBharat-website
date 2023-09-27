@@ -21,17 +21,21 @@ def get_data():
   return data
 
 
-def get_disease(disease, symptoms):
+def get_disease(symptoms):
+  if symptoms is None:
+    return None
+
   cnx = get_connector()
   cursor = cnx.cursor()
 
-  query = "SELECT * FROM Symptoms WHERE AyurTerm = %s AND symptom = %s"
+  query = "SELECT * FROM Ayurved WHERE symptoms LIKE %s LIMIT 1"
   
-  cursor.execute(query, (disease, symptoms))
+  cursor.execute(query, ('%'+symptoms+'%',))
   data = cursor.fetchall()
   cursor.close()
   cnx.close()
   return data
+
 
 
 def insert_user(name, email, phone, password):
