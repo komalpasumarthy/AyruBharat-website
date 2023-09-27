@@ -25,7 +25,7 @@ def get_disease(disease, symptoms):
   cnx = get_connector()
   cursor = cnx.cursor()
 
-  query = ("SELECT * FROM Symptoms WHERE AyurTerm = %s AND symptom = %s")
+  query = "SELECT * FROM Symptoms WHERE AyurTerm = %s AND symptom = %s"
   
   cursor.execute(query, (disease, symptoms))
   data = cursor.fetchall()
@@ -33,3 +33,29 @@ def get_disease(disease, symptoms):
   cnx.close()
   return data
 
+
+def insert_user(name, email, phone, password):
+  cnx = get_connector()
+  cursor = cnx.cursor()
+  
+  query = "INSERT INTO user VALUES (%s, %s, %s, %s)"
+  
+  cursor.execute(query, (name, email, phone, password) )
+  cnx.commit()
+  cursor.close()
+  cnx.close()
+  
+
+def check_user(email, password):
+  cnx = get_connector()
+  cursor = cnx.cursor()
+  cursor.execute("SELECT * FROM user WHERE email=%s", (email,))
+  user = cursor.fetchone()
+  cnx.close()
+    
+  if user:
+      if user[3] == password:  # assuming password is stored in 4th column
+          return True, True
+      else:
+          return True, False
+  return False, False
