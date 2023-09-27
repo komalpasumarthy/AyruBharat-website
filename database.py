@@ -22,18 +22,16 @@ def get_data():
 
 
 def get_disease(symptoms):
-  if symptoms is None:
-    return None
-
   cnx = get_connector()
   cursor = cnx.cursor()
 
   query = "SELECT * FROM Ayurved WHERE symptoms LIKE %s LIMIT 1"
   
   cursor.execute(query, ('%'+symptoms+'%',))
-  data = cursor.fetchall()
+  data = cursor.fetchall()[0]
   cursor.close()
   cnx.close()
+  # print(data)
   return data
 
 
@@ -63,3 +61,6 @@ def check_user(email, password):
       else:
           return True, False
   return False, False
+
+
+# get_disease('Muscle weakness')

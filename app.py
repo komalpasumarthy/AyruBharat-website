@@ -7,13 +7,26 @@ app = Flask(__name__)
 
 # index page
 @app.route("/", methods=['GET', 'POST'])
-def index():
+def homepage():
+  return render_template('homePage.html')
+
+# input page
+@app.route('/input', methods=['GET','POST'])
+def inputpage():
   if request.method == 'POST':
     symptoms = request.form.get('symptoms')
-    results = database.get_disease(symptoms)
-    return render_template('result.html', results=results)
+    if (symptoms):
+      data = database.get_disease(symptoms)
+      return render_template('outputpage.html', result = data)
+    return redirect(url_for('outputpage'))
+  return render_template('inputpage.html')
 
-  return render_template('index.html')
+
+
+# result page
+@app.route('/result')
+def outputpage():
+  return render_template('outputpage.html')
 
 
 # login page
@@ -49,11 +62,6 @@ def signup():
 
   return render_template('signup.html')
 
-
-@app.route('/result')
-def results():
-  data = database.get_data()
-  return render_template('result.html', users=data)
 
 
 if __name__ == '__main__':

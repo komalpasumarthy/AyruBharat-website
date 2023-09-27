@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+<title>AryuBharat</title>
+<script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/homePage.css')}}">
+{% endblock %}
+
+
+{% block body %}
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="https://live.staticflickr.com/65535/53217076980_d733d6cd73_w.jpg" width="50" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+                <ul class="navbar-nav fw-bold">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/input">Analyse problem</a>
+                    </li>
+                  <li class="nav-item">
+                        <a class="nav-link" href="/login">Log<span style="color: MediumSeaGreen;">in</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./signup">Sign<span style="color: MediumSeaGreen;">up</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- text section -->
+    <div class="banner-section-bg-container d-flex justify-content-center flex-column">
+        <div class="text-center">
+            <h1 class="banner-heading mb-3">Ayur Bharat</h1>
+            <p class="banner-caption mb-4">One stop solution for your problem</p>
+            <a href="/input"><button class="custom-outline-button" id="tryNow">Try Now!</button></a>
+        </div>
+    </div>
+
+<!-- why choose us section -->
+    <div class="wcu-section pt-5 pb-5" id="wcuSection">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="wcu-section-heading">Why Choose Us?</h1>
+                    <p class="wcu-section-description">
+                        We analyse your epidemic accurately and give Remidies accordingly through our Machine learning model.
+                    </p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="wcu-card p-3 mb-3">
+                        <i class="fas fa-brain fa-4x"></i>
+                        <h1 class="wcu-card-title mt-3">Ayurvedic Recommendations</h1>
+                        <p class="wcu-card-description">
+                            The system provides a list of Ayurvedic recommendations based on the user's
+                            search query.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 ">
+                    <div class="wcu-card p-3 mb-3">
+                        <i class="fas fa-info fa-4x"></i>
+                        <h1 class="wcu-card-title mt-3">Detailed Formulation</h1>
+                        <p class="wcu-card-description">
+                            Users can access detailed formulation of recommended remedy,
+                            upon subscription ensuring detailed understanding.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="wcu-card p-3 mb-3">
+                        <i class="fas fa-tag fa-4x"></i>
+                        <h1 class="wcu-card-title mt-3">Made Customised</h1>
+                        <p class="wcu-card-description">
+                            Users can even buy the remedy from us by payment which is available on
+                            multiple options such as Cash on Delivery and Online transaction.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="wcu-card p-3 mb-3">
+                        <i class="fas fa-robot fa-4x"></i>
+                        <h1 class="wcu-card-title mt-3">Customer Support</h1>
+                        <p class="wcu-card-description">
+                            They can track their order. Take help using our chat bot and manby more.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="wcu-card p-3 mb-3">
+                        <i class="fas fa-question fa-4x"></i>
+                        <h1 class="wcu-card-title mt-3">Know why?</h1>
+                        <p class="wcu-card-description">
+                            Know detailed cause of illness and get tips to avoid in case of minor illness.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="wcu-card p-3 mb-3">
+                        <i class="fas fa-user-md fa-4x"></i>
+                        <h1 class="wcu-card-title mt-3">Expert Consultation</h1>
+                        <p class="wcu-card-description">
+                            Get one on one expert opinion from famous ayurvedic doctor based on your illness sevearity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- footer section-->
+    <div class="pt-4 footer-container footer-text">
+        <div class="container p-3 pb-1">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="d-flex flex-row justify-content-md-start justify-content-center">
+                        <img src="https://live.staticflickr.com/65535/53217076980_d733d6cd73_w.jpg" class="footer-mainlogo" />
+                    </div>
+                    <div class="d-flex flex-row justify-content-md-start justify-content-center">
+                        <div class="footer-social-icon-bg">
+                            <i class="fab fa-google icon"></i>
+                        </div>
+                        <div class="footer-social-icon-bg">
+                            <i class="fab fa-twitter icon"></i>
+                        </div>
+                        <div class="footer-social-icon-bg">
+                            <i class="fab fa-instagram icon"></i>
+                        </div>
+                        <div class="footer-social-icon-bg">
+                            <i class="fab fa-linkedin icon"></i>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row justify-content-md-start justify-content-center">
+                        <p class="footer-text">37, Ayur Vigyan Nagar, New Delhi,India.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <h1 class="footer-heading">
+                        Contact Us
+                    </h1>
+                    <div class="d-flex flex-row justify-content-start">
+                        <i class="fas fa-envelope footer-logos"></i>
+                        <p>vr@gmail.com</p>
+                    </div>
+                    <div class="d-flex flex-row justify-content-start">
+                        <i class="fas fa-phone-alt footer-logos"></i>
+                        <p>1234567890</p>
+                    </div>
+                    <div class="d-flex flex-row justify-content-start">
+                        <i class="fa fa-skype footer-logos"></i>
+                        <p>Komal</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <h1 class="footer-heading">Let us Help You</h1>
+                    <p class="text">100% Purchase Protection</p>
+                    <p class="text">Your Account</p>
+                    <p class="text">Return Centre</p>
+                    <p class="text">Help</p>
+                </div>
+                <div class="col-12">
+                    <hr class="footer-line" />
+                    <p class="copyright-text"> Copyright <i class="far fa-copyright "></i> Registered by AyurBharat 2023</P>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

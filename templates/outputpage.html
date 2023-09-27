@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+    <title>AryuBharat</title>
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/outputpage.css')}}">
+{% endblock %}
+
+{% block body %}
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://live.staticflickr.com/65535/53217076980_d733d6cd73_w.jpg" width="50" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+                <ul class="navbar-nav fw-bold">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/input">Analyse tool</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- input section-->
+    <div class="banner-section-bg-container d-flex justify-content-center flex-column mb-4">
+        <div class="text-center">
+            <h1 class="banner-heading mb-3">Ayur Bharat</h1>
+            <p class="banner-caption mb-4">One stop solution for your problem</p>
+        </div>
+        <div class="inputForm m-auto">
+            <form class="subscribeForm" id="subscribeForm">
+                <div class="mb-3">
+                    <label for="disease" class="labelText">Disease Name</label>
+                    <input type="text" class="form-control" id="disease" value='{{ result[0] }}' />
+                </div>
+                <div class="mb-3">
+                    <label for="desc" class="labelText">Disease Description</label>
+                    <input type="text" rows="4" class="form-control" id="desc" value='{{ result[3] }}' />
+                </div>
+                <div class="mb-3">
+                    <label for="remedy" class="labelText">Remedy/Formulation</label>
+                    <input type="text" rows="4" class="form-control" id="remedy" value='{{ result[2] }}' />
+
+                </div>
+                <div class="mb-3">
+                    <label for="symptoms" class="labelText">Symptoms</label>
+                    <input type="text" class="form-control" id="symptoms" value='{{ result[1] }}' />
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <!-- why choose us section -->
+
+
+    <!-- footer section-->
+    <div class="pt-4 footer-container footer-text">
+        <div class="container p-3 pb-1">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="d-flex flex-row justify-content-md-start justify-content-center">
+                        <img src="https://live.staticflickr.com/65535/53217076980_d733d6cd73_w.jpg" class="footer-mainlogo" />
+                    </div>
+                    <div class="d-flex flex-row justify-content-md-start justify-content-center">
+                        <div class="footer-social-icon-bg">
+                            <i class="fab fa-google icon"></i>
+                        </div>
+                        <div class="footer-social-icon-bg">
+                            <i class="fab fa-twitter icon"></i>
+                        </div>
+                        <div class="footer-social-icon-bg">
+                            <i class="fab fa-instagram icon"></i>
+                        </div>
+                        <div class="footer-social-icon-bg">
+                            <i class="fab fa-linkedin icon"></i>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row justify-content-md-start justify-content-center">
+                        <p class="footer-text">37, Ayur Vigyan Nagar, New Delhi,India.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <h1 class="footer-heading">
+                        Contact Us
+                    </h1>
+                    <div class="d-flex flex-row justify-content-start">
+                        <i class="fas fa-envelope footer-logos"></i>
+                        <p>vr@gmail.com</p>
+                    </div>
+                    <div class="d-flex flex-row justify-content-start">
+                        <i class="fas fa-phone-alt footer-logos"></i>
+                        <p>1234567890</p>
+                    </div>
+                    <div class="d-flex flex-row justify-content-start">
+                        <i class="fa fa-skype footer-logos"></i>
+                        <p>Komal</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <h1 class="footer-heading">Let us Help You</h1>
+                    <p class="text">100% Purchase Protection</p>
+                    <p class="text">Your Account</p>
+                    <p class="text">Return Centre</p>
+                    <p class="text">Help</p>
+                </div>
+                <div class="col-12">
+                    <hr class="footer-line" />
+                    <p class="copyright-text"> Copyright <i class="far fa-copyright "></i> Registered by AyurBharat 2023</P>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+
+.banner-section-bg-container {
+    background-image: URL("https://live.staticflickr.com/65535/53216717231_923f1abb0e_b.jpg");
+    background-size: cover;
+    height: 70vh;
+}
+
+.banner-heading {
+    color: white;
+    font-family: "Roboto";
+    font-size: 60px;
+    font-weight: 300;
+}
+
+.banner-caption {
+    color: #f5f7fa;
+    font-family: "Roboto";
+    font-size: 24px;
+    font-weight: 300;
+}
+
+
+.custom-outline-button {
+    color: white;
+    background-color: transparent;
+    width: 130px;
+    height: 45px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    border-radius: 8px;
+}
+
+
+.project-heading {
+    flex: none;
+    height: auto;
+    position: relative;
+    width: 100%;
+}
+
+.heading {
+    color: white;
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 80px;
+    font-family: Outfit, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    text-align: left;
+    letter-spacing: 0px;
+    white-space: normal;
+    line-height: 1;
+    margin: 0px;
+    padding: 0px 0px 10px;
+}
+
+
+
+
+.main-heading-text {
+    flex: none;
+    height: auto;
+    position: relative;
+    width: 100%;
+}
+
+.access-button {
+    color: #FFFDD0;
+    background-color: transparent;
+    width: 130px;
+    height: 45px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FFFDD0;
+    border-radius: 8px;
+}
+
+.wcu-section {
+    background-color: #f9fbfe;
+}
+
+.wcu-section-heading {
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.wcu-section-description {
+    color: #5a7184;
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+.wcu-card {
+    text-align: center;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e5eaf4;
+    border-radius: 16px;
+}
+
+.wcu-card-image {
+    width: 87px;
+    height: 90px;
+}
+
+.wcu-card-title {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.wcu-card-description {
+    color: #7b8794;
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+.copyright-text {
+    font-family: "Roboto";
+    font-size: 12px;
+
+    text-align: center;
+}
+
+.footer-container {
+    background-color: #19232d;
+    color: #5a7184;
+}
+
+.footer-mainlogo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+}
+
+.footer-social-icon-bg {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #202b36;
+    padding: 5px;
+    margin: 3px;
+    padding-left: 12px;
+    padding-top: 8px;
+    margin-bottom: 9px;
+}
+
+.footer-text {
+
+    font-family: Roboto;
+    margin: 10px;
+    color: white;
+}
+
+.footer-heading {
+    font-size: 19px;
+    font-family: Roboto;
+    font-weight: 600;
+    margin: 10px;
+}
+
+.footer-logos {
+    margin: 7px;
+    margin-right: 8px;
+}
+
+.footer-line {
+    margin-top: 10px;
+    background-color: #959ead;
+}
