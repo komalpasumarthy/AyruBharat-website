@@ -1,4 +1,17 @@
 from flask import Flask, render_template
+from flask_sqlalchemy import SQLAlchemy
+
+# Replace with your actual values
+DATABASE_USER = 'sql9649376'
+DATABASE_PASSWORD = 'YPvLIfRIHG'
+DATABASE_NAME = 'sql9649376'
+INSTANCE_CONNECTION_NAME = 'sql9649376'
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://{DATABASE_USER}:{DATABASE_PASSWORD}@/{DATABASE_NAME}?unix_socket=/cloudsql/{INSTANCE_CONNECTION_NAME}'
+db = SQLAlchemy(app)
+
+
 
 app = Flask(__name__)
 
